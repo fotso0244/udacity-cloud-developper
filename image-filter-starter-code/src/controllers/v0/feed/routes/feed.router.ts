@@ -26,7 +26,7 @@ router.get('/', async (req: Request, res: Response) => {
   // RETURNS
   //   the filtered image file [!!TIP res.sendFile(filteredpath); might be useful]
   router.get( "/filteredimage", 
-          //requireAuth,
+          requireAuth,
           async ( req: Request, res: Response ) => {
     let { image_url } = req.query;
     if ( !image_url ) {
