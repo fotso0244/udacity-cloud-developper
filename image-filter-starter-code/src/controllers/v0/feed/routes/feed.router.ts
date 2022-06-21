@@ -1,6 +1,7 @@
 import { Router, Request, Response } from 'express';
 import { requireAuth } from '../../users/routes/auth.router';
 import {cropImage} from '../../../../process_images/cropImage';
+import {resizeImage} from '../../../../process_images/resizeImage';
 import {deleteLocalFiles} from '../../../../util/util';
 var onFinished = require('on-finished');
 
@@ -34,7 +35,8 @@ router.get('/', async (req: Request, res: Response) => {
                 .send(`image url is required`);
     }
 //try to filter the image
-const imgfilter = await cropImage(image_url);
+const imgresize = await resizeImage(image_url);
+const imgfilter = await cropImage(imgresize);
 //test if error
 if(!imgfilter) {
   return res.status(422)
@@ -44,7 +46,7 @@ if(!imgfilter) {
     return res.status(200)
               .sendFile(imgfilter, function (err) {
                 if(!err) {
-                  deleteLocalFiles([imgfilter])
+                  deleteLocalFiles([imgfilter, imgresize])
                 }
               });
   } );
