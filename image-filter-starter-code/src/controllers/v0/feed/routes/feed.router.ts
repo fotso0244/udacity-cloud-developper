@@ -35,6 +35,11 @@ router.get('/', async (req: Request, res: Response) => {
     }
 //try to filter the image
 const imgfilter = await cropImage(image_url);
+//test if error
+if(!imgfilter) {
+  return res.status(422)
+                .send(`cannot process image_url`);
+}
 //send resulting file in response and delete local files on finish
     return res.status(200)
               .sendFile(imgfilter, function (err) {
