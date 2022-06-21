@@ -1,1 +1,1 @@
-Environment endpoint: project2-udacity-cloud-developper.us-east-1.elasticbeanstalk.com
+My Environment endpoint: project2-udacity-cloud-developper.us-east-1.elasticbeanstalk.com
