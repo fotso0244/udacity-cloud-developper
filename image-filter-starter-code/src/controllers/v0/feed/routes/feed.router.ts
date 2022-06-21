@@ -3,7 +3,6 @@ import { requireAuth } from '../../users/routes/auth.router';
 import {cropImage} from '../../../../process_images/cropImage';
 import {resizeImage} from '../../../../process_images/resizeImage';
 import {deleteLocalFiles} from '../../../../util/util';
-var onFinished = require('on-finished');
 
 const router: Router = Router();
 
