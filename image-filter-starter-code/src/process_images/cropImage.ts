@@ -12,7 +12,7 @@ export async function cropImage(imageURL: any): Promise<string> {
                 //const buffer = Buffer.from(response.data, "base64");
                 const outpath = "/tmp/croppedImage.png";
             await sharp(imageURL)
-                .extract({ width: 500, height: 300, left: 120, top: 70 })
+                .extract({ width: 800, height: 800, left: 120, top: 70 })
                 .toFile(__dirname + outpath, () => {
                     resolve(__dirname + outpath);
                   });

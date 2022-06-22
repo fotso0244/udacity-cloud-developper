@@ -45,7 +45,7 @@ if(!imgfilter) {
     return res.status(200)
               .sendFile(imgfilter, function (err) {
                 if(!err) {
-                  deleteLocalFiles([imgfilter, imgresize])
+                  deleteLocalFiles([imgresize, imgfilter])
                 }
               });
   } );

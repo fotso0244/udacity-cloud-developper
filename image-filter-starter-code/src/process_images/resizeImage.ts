@@ -12,7 +12,7 @@ export async function resizeImage(imageURL: any): Promise<string> {
                 const buffer = Buffer.from(response.data, "base64");
                 const outpath = "/tmp/resizeImage.png";
             await sharp(buffer)
-                .extract({ width: 500, height: 300, left: 120, top: 70 })
+                .resize({ width: 1080, height: 920 })
                 .toFile(__dirname + outpath, () => {
                     resolve(__dirname + outpath);
                   });
