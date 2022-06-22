@@ -32,9 +32,9 @@ import { IndexRouter } from './controllers/v0/index.router';
   //app.get( "/", async ( req: Request, res: Response ) => {
   //  res.send("try GET /filteredimage?image_url={{}}")
   //} );
-  app.get( "/", async ( req, res ) => {
-    res.send( "try GET /filteredimage?image_url={{}}" );
-  } );
+  //app.get( "/", async ( req, res ) => {
+    //res.send( "try GET /filteredimage?image_url={{}}" );
+  //} );
   
 
   // Start the Server
