@@ -5,3 +5,4 @@
 !.elasticbeanstalk/*.global.yml
 #environment variable file
 envar.env
+.platform/hooks/prebuild/*

@@ -25,7 +25,7 @@ import { IndexRouter } from './controllers/v0/index.router';
     next();
   });
 
-  app.use('/api/v0/', IndexRouter)
+  app.use('/', IndexRouter)
 
   // Root Endpoint
   // Displays a simple message to the user
