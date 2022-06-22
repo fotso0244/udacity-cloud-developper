@@ -10,10 +10,6 @@ const router: Router = Router();
 router.get( "/", async ( req, res ) => {
     res.send( "try GET /filteredimage?image_url={{}}" );
   } );
-//router.get('/', async (req: Request, res: Response) => {
-    
-   // res.send("Welcome on this project");
-//});
 
   // @TODO1 IMPLEMENT A RESTFUL ENDPOINT
   // GET /filteredimage?image_url={{URL}}
