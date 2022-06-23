@@ -8,7 +8,7 @@ const router: Router = Router();
 
 // Get all feed items
 router.get( "/", async ( req, res ) => {
-    res.send( "try GET /filteredimage?image_url={{}}" );
+    res.status(200).send( "try GET /filteredimage?image_url={{}}" );
   } );
 
   // @TODO1 IMPLEMENT A RESTFUL ENDPOINT
