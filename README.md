@@ -1,4 +1,4 @@
-My Environment endpoint: project-2-udacity-cloud-developper.us-east-1.elasticbeanstalk.com
+My Environment endpoint: project2udacitycloud-developper.us-east-1.elasticbeanstalk.com
 
 I used this link to process image with sharp package:
 
