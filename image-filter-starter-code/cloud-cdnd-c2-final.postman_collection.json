@@ -8,13 +8,16 @@
 	"item": [
 		{
 			"name": "http://{{HOST}}/filteredimage?image_url=https://timedotcom.files.wordpress.com/2019/03/kitten-report.jpg",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
 			"request": {
 				"auth": {
 					"type": "bearer",
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImZvdHNvMDI0NEBnbWFpbC5jb20iLCJwYXNzd29yZF9oYXNoIjoiJDJiJDEwJGZ3b1ZzUndIMlMyVWFzTkhVY0d6NmVHRFhRR0hkblA5TlAwdTdUMy50YnZPV0w3MWZEdkVDIn0.KasAuxavHVKl0GlAi147VW9QJx-HKn9LrhMA7xttGDk",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImZvdHNvMDI0NEBnbWFpbC5jb20iLCJwYXNzd29yZF9oYXNoIjoiJDJiJDEwJFpEN3gxL0guUGVDZ1lwWkpYVTdYLk9aRDlFQ0ZkaXVlUEMzeFNrOUZMV1Nsbld2MXo5QjMuIn0.yrPtiJQUNaTGO_4X2RtVXHvBuUbxswoUFylgo9acg4c",
 							"type": "string"
 						}
 					]
@@ -22,7 +25,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://{{HOST}}/filteredimage?image_url=https://upload.wikimedia.org/wikipedia/commons/b/bd/Golden_tabby_and_white_kitten_n01.jpg",
+					"raw": "http://{{HOST}}/filteredimage?image_url=https://th.bing.com/th/id/R.7a71e7277debf5eacfd3857531d2fd8b?rik=qvRQi3bPUSv%2fJQ&pid=ImgRaw&r=0",
 					"protocol": "http",
 					"host": [
 						"{{HOST}}"
@@ -33,7 +36,15 @@
 					"query": [
 						{
 							"key": "image_url",
-							"value": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Golden_tabby_and_white_kitten_n01.jpg"
+							"value": "https://th.bing.com/th/id/R.7a71e7277debf5eacfd3857531d2fd8b?rik=qvRQi3bPUSv%2fJQ"
+						},
+						{
+							"key": "pid",
+							"value": "ImgRaw"
+						},
+						{
+							"key": "r",
+							"value": "0"
 						}
 					]
 				}
