@@ -10,9 +10,9 @@ export async function resizeImage(imageURL: any): Promise<string> {
                 });
                 // converts the arraybuffer to base64
                 const buffer = Buffer.from(response.data, "base64");
-                const outpath = "/tmp/resizeImage.png";
+                const outpath = "/tmp/resizeImage.jpg";
             await sharp(buffer)
-                .resize({ width: 1080, height: 920 })
+                .resize({ width: 500, height: 400 })
                 .toFile(__dirname + outpath, () => {
                     resolve(__dirname + outpath);
                   });

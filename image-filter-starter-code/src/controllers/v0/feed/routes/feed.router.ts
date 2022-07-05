@@ -3,6 +3,7 @@ import { requireAuth } from '../../users/routes/auth.router';
 import {cropImage} from '../../../../process_images/cropImage';
 import {resizeImage} from '../../../../process_images/resizeImage';
 import {deleteLocalFiles} from '../../../../util/util';
+import {filterImageFromURL} from '../../../../util/util';
 
 const router: Router = Router();
 
@@ -35,6 +36,7 @@ router.get( "/", async ( req, res ) => {
 //try to filter the image
 const imgresize = await resizeImage(image_url);
 const imgfilter = await cropImage(imgresize);
+//const imgfilter = await filterImageFromURL(image_url);
 //test if error
 if(!imgfilter) {
   return res.status(422)
@@ -44,7 +46,7 @@ if(!imgfilter) {
     return res.status(200)
               .sendFile(imgfilter, function (err) {
                 if(!err) {
-                  deleteLocalFiles([imgresize, imgfilter])
+                  deleteLocalFiles([imgfilter, imgresize])
                 }
               });
   } );

@@ -10,9 +10,10 @@ export async function cropImage(imageURL: any): Promise<string> {
                 //});
                 // converts the arraybuffer to base64
                 //const buffer = Buffer.from(response.data, "base64");
-                const outpath = "/tmp/croppedImage.png";
+                const outpath = "/tmp/croppedImage.jpg";
             await sharp(imageURL)
-                .extract({ width: 800, height: 800, left: 120, top: 70 })
+                .extract({ width: 300, height: 300, left: 100, top: 70 })
+                .jpeg({quality: 60, progressive: true, mozjpeg: true})
                 .toFile(__dirname + outpath, () => {
                     resolve(__dirname + outpath);
                   });
